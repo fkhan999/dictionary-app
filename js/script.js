@@ -9,15 +9,14 @@ async function fetch_meaning(word) {
     }
 }
 
-function Play()
-{
-  var myAudio = document.getElementById("audioval");
-  if(myAudio.paused) {
-      myAudio.play();
-  }
-  else {
-     myAudio.pause();
-  }
+function Play() {
+    var myAudio = document.getElementById("audioval");
+    if (myAudio.paused) {
+        myAudio.play();
+    }
+    else {
+        myAudio.pause();
+    }
 }
 
 
@@ -32,11 +31,11 @@ btn.addEventListener("click", async (event) => {
         //console.log(meaning[0]);
         const definition = meaning[0]['meanings'][0]['definitions'][0]['definition'];
         const partOfSpeech = meaning[0]['meanings'][0]['partOfSpeech'];
-        const audio=meaning[0]['phonetics']
+        const audio = meaning[0]['phonetics']
         //console.log(audio);
-        let i=0
-        for(i=0;i<audio.length;i++){
-            if (audio[i]['audio']!==''){
+        let i = 0
+        for (i = 0; i < audio.length; i++) {
+            if (audio[i]['audio'] !== '') {
                 break;
             }
         }
@@ -60,3 +59,15 @@ btn.addEventListener("click", async (event) => {
     }
 
 })
+
+darkModeBtn = document.getElementById("flexSwitchCheckDefault")
+darkModeBtn.addEventListener("click", async (event) => {
+    console.log(document.querySelector('html').getAttribute("data-bs-theme"));
+    if (document.querySelector('html').getAttribute("data-bs-theme")=="light"){
+        document.querySelector('html').setAttribute("data-bs-theme","dark")
+    }else{
+        document.querySelector('html').setAttribute("data-bs-theme","light")
+    }
+
+})
+

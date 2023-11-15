@@ -20,18 +20,24 @@
     <nav class="navbar" style="background-color: #e3f2fd;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./images/dictionary.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="./images/dictionary.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
                 Dictionary
             </a>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+              </div>
         </div>
+        
     </nav>
     <div class="search-area">
-        <label for="word">Enter a Word:</label>
-        <input type="text" id="word" name="word">
-        <input type="submit" id="search-btn" value="Search">
+        <!-- <label for="word">Enter a Word:</label>
+        <input type="text" id="word" name="word"> -->
+        <input type="text" class="form-control" id="word" placeholder="Enter a word"><br>
+        <button type="submit" id="search-btn" class="btn btn-primary">Search</button>
     </div>
     <div id="result-area">
-
     </div>
 </body>
 

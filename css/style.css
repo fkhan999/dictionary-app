@@ -11,3 +11,7 @@
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.form-control{
+    max-width: 500px;
+}
